@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+ --font-raleway: "Raleway", "sans-serif";
+}
+
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@layer base{
+  body {
+    @apply bg-gray-100 m-0 p-0 font-raleway scroll-smooth
+  }
+}
