@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../utilities/AuthContext";
 
 const Signup = () => {
-  const url = "localhost:8000/api/auth/register/";
+  
+
+  const url = "http://localhost:8000/api/auth/register/";
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -30,14 +32,14 @@ const Signup = () => {
     setLoading(true);
     try {
       const response = await axios.post(url, formData);
-      
+      console.log(response)
       setErrors({}); // clear old errors if success
       setAuth({ isAuthenticated: false, user: { email: formData.email } });
 
       navigate("/auth/activate-account");
     } catch (error) {
       setLoading(false);
-      
+      console.log(error.response)
       setErrors(error.response.data);
     }
   };

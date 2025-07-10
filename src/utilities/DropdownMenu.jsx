@@ -30,11 +30,14 @@ export default function DropdownMenu() {
   const { setAuth } = useAuth();
 
   const handleLogout = async () => {
-    const url = "localhost:8000/api/auth/logout/";
+    console.log(localStorage.getItem("refresh_token"));
+    const url = "http://localhost:8000/api/auth/logout/";
     try {
       const response = await axios.post(url, {
         refresh: localStorage.getItem("refresh_token"),
       });
+      console.log(response);
+
       if (response.status == 200) {
         localStorage.removeItem("access_token");
         localStorage.removeItem("refresh_token");
@@ -42,6 +45,7 @@ export default function DropdownMenu() {
         navigate("/auth/login");
       }
     } catch (error) {
+      console.log(error.response);
       toast.error("logout failed");
     }
   };
@@ -50,7 +54,7 @@ export default function DropdownMenu() {
       <Menu as="div" className="relative">
         <div>
           <MenuButton className="flex items-center justify-center p-2 rounded-lg hover:bg-gray-700 transition focus:outline-0 border-none data-active:bg-gray-700">
-            <HiOutlineMenuAlt3 className="text-2xl text-white" />
+            <HiOutlineMenuAlt3 className="text-3xl text-black" />
           </MenuButton>
         </div>
 

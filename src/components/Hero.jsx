@@ -13,9 +13,10 @@ const Hero = () => {
             Shape Your Body, Shape Your Destiny
           </h1>
           <p className="text-sm font-normal text-black leading-tight  ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            odio quasi consectetur hic adipisci iste! Consectetur quia labore
-            quibusdam.
+            Be more than just a member — become part of a community that moves,
+            grows, and conquers together. Whether you’re chasing peak
+            performance or just getting started, Apex is where your journey
+            truly begins.
           </p>
           <button className="text-sm font-semibold text-white px-3 py-2 flex gap-2 rounded-full bg-orange-500 w-fit items-center cursor-pointer">
             <span>Become A Member</span>

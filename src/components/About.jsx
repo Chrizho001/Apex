@@ -11,8 +11,9 @@ const About = () => {
           We Believe That Fitness Is Not Just A Destination But A Journey
         </h1>
         <p className="text-sm text-black font-normal">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolor
-          quasi natus nulla deleniti magni doloribus, libero eum impedit,
+          Your fitness goals don’t end at a finish line — they evolve. At Apex,
+          we walk with you every step of the way, helping you build a stronger,
+          healthier version of yourself.
         </p>
         <div className="flex flex-col w-full gap-y-3">
           <div className="flex justify-start items-center gap-x-6">
@@ -23,9 +24,11 @@ const About = () => {
               <h3 className="text-xl font-semibold text-black">
                 Expert Guidance
               </h3>
-              <span className="text-sm font-normal text-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                sapiente aliquam magnam fuga? Dolores
+              <span className="text-sm font-normal text-black text-wrap">
+                Our certified trainers aren’t just here to count reps — they’re
+                here to coach, motivate, and customize your fitness plan to
+                match your lifestyle and goals. From beginners to seasoned
+                athletes, we’ve got your back.
               </span>
             </div>
           </div>
@@ -39,8 +42,10 @@ const About = () => {
                 Cutting Edge Facillities
               </h3>
               <span className="text-sm font-normal text-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                sapiente aliquam magnam fuga? Dolores
+                Train with top-of-the-line equipment in a modern, spacious
+                environment designed to energize and inspire. From weights to
+                cardio, yoga to functional training — we’ve got it all under one
+                roof.
               </span>
             </div>
           </div>
@@ -54,8 +59,10 @@ const About = () => {
                 Flexible Membership Options
               </h3>
               <span className="text-sm font-normal text-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                sapiente aliquam magnam fuga? Dolores
+                Life can be unpredictable, so your membership shouldn’t be a
+                burden. Choose a plan that fits your schedule and goals —
+                whether it’s daily, monthly, or long-term. No pressure, just
+                progress.
               </span>
             </div>
           </div>

@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../utilities/AuthContext";
 
 const Login = () => {
-  const url = "localhost:8000/api/auth/login/";
+  const url = "http://localhost:8000/api/auth/login/";
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
@@ -24,12 +24,14 @@ const Login = () => {
   const handleForgotPassword = async (e) => {
     e.preventDefault();
     setLoading2(true);
-    const url = "localhost:8000/api/auth/reset-password/";
+    const url = "http://localhost:8000/api/auth/reset-password/";
     try {
       const response = await axios.post(url, { email: formData.email });
-
-      navigate("/auth/reset-password", { state: { email: formData.email } });
+      console.log(response)
+      setLoading(false)
+      navigate("/auth/password-reset-confirm", { state: { email: formData.email } });
     } catch (error) {
+      console.log(error.response)
       setErrors(error.response.data);
       setLoading2(false);
     }
@@ -50,10 +52,10 @@ const Login = () => {
       localStorage.setItem("access_token", response.data.access_token);
       localStorage.setItem("refresh_token", response.data.refresh_token);
       setAuth({ isAuthenticated: true, user: { email: formData.email } });
-
+      console.log(response)
       navigate("/");
     } catch (error) {
-      
+      console.log(error.response)
       setErrors(error.response.data);
       setLoading(false);
     }
@@ -114,7 +116,7 @@ const Login = () => {
                 <input
                   value={formData.password}
                   type={passwordVisible ? "text" : "password"}
-                  name="email"
+                  name="password"
                   placeholder="Enter your password"
                   onChange={(e) =>
                     setFormData({ ...formData, password: e.target.value })
