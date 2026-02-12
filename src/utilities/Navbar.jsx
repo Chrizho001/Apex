@@ -29,9 +29,9 @@ const Navbar = () => {
                 <div>
                     <MembershipMedal membershipType={membershipType} />
                 </div>
-                {/* <div>
+                <div>
                     <DropdownMenu />
-                </div> */}
+                </div>
             </div>
         </nav>
     );

@@ -10,7 +10,7 @@ import { useAuth } from "../utilities/AuthContext";
 const Signup = () => {
   
 
-  const url = "http://localhost:8000/api/auth/register/";
+  const url = "https://apex-2ko2.onrender.com/api/auth/register/";
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
