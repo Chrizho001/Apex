@@ -3,16 +3,19 @@ import About from "../components/About"
 import Tag from "../components/Tag"
 import Pricing from '../components/Pricing'
 import NewsLetter from "../components/NewsLetter"
+import Footer from '../components/Footer'
 
 
 const Home = () => {
   return (
-    <section className="flex flex-col gap-y-12 w-full h-full ">
+    <section className="flex flex-col gap-y-6 w-full h-full ">
         <Hero />
         <About />
         <Tag />
         <Pricing />
         <NewsLetter />
+        <Footer />
+        
     </section>
   )
 }

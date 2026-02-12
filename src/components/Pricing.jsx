@@ -76,7 +76,7 @@ const Pricing = () => {
                     }}
                     className="px-4 py-1 bg-orange-500 rounded-full text-white text-lg font-sans"
                   >
-                    5000
+                    &#8358;5000
                   </button>
                 ) : (
                   <div className="flex w-fit items-center justify-center ">
@@ -113,7 +113,7 @@ const Pricing = () => {
                     }}
                     className="px-4 py-1 bg-gray-500 rounded-full text-white text-lg font-sans"
                   >
-                    10000
+                    &#8358;10000
                   </button>
                 ) : (
                   <div className="flex w-fit items-center justify-center ">
@@ -151,7 +151,7 @@ const Pricing = () => {
                     }}
                     className="px-4 py-1 bg-gray-500 rounded-full text-white text-lg font-sans"
                   >
-                    15000
+                    &#8358;15000
                   </button>
                 ) : (
                   <div className="flex w-fit items-center justify-center ">
